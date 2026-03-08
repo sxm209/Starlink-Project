@@ -1,0 +1,195 @@
+.app-shell {
+	background: #0a0a0a;
+	color: #fff;
+	font-family: sans-serif;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.app-title {
+	text-align: center;
+	margin: 0;
+	padding: 8px 0;
+	font-size: 22px;
+}
+
+.panel {
+	background: #111;
+	border-top: 1px solid #2b2b2b;
+	border-bottom: 1px solid #2b2b2b;
+}
+
+.panel > summary {
+	cursor: pointer;
+	font-weight: 700;
+	color: #ccefff;
+	padding: 8px 12px;
+	user-select: none;
+	border-bottom: 1px solid #242424;
+	font-size: 14px;
+}
+
+.panel-filters[open] > summary,
+.panel-telemetry[open] > summary {
+	background: #171717;
+}
+
+.filters-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(200px, 1fr));
+	gap: 8px;
+	padding: 8px;
+}
+
+.filter-card {
+	background: #1a1a1a;
+	border: 1px solid #333;
+	border-radius: 8px;
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	font-size: 13px;
+}
+
+.card-title {
+	margin: 0 0 4px 0;
+	color: #9fd4ff;
+	font-size: 13px;
+}
+
+.dark-input {
+	width: 100px;
+	background: #2c2c2c;
+	color: #fff;
+	border: 1px solid #555;
+	border-radius: 4px;
+	padding: 5px 6px;
+	font-size: 13px;
+}
+
+.stacked-list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.stacked-list label,
+.stacked-list span {
+	color: #e6e6e6;
+}
+
+.helper-text {
+	color: #c4c4c4;
+	font-size: 12px;
+}
+
+.catalog-dropdown {
+	color: #000;
+}
+
+.reset-btn {
+	margin-top: 6px;
+	cursor: pointer;
+	padding: 6px 8px;
+	background: #303030;
+	color: #fff;
+	border: 1px solid #555;
+	border-radius: 6px;
+	font-size: 12px;
+}
+
+.simple-date-row {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.simple-date-picker,
+.simple-date-picker * {
+	box-sizing: border-box;
+}
+
+.simple-date-picker .SingleDatePicker,
+.simple-date-picker .SingleDatePickerInput {
+	background: #141414;
+	border: 1px solid #555;
+	border-radius: 4px;
+}
+
+.simple-date-picker .DateInput {
+	background: #141414;
+}
+
+.simple-date-picker .DateInput_input {
+	background: #141414;
+	color: #e8f1ff;
+	border-bottom: 0;
+	font-size: 12px;
+	padding: 5px 6px;
+	width: 120px;
+	height: 28px;
+}
+
+.simple-date-picker .DateInput_input__focused {
+	border-bottom: 1px solid #7fb6ff;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-height: 0;
+}
+
+.orbit-container {
+	flex: 1;
+	min-height: 0;
+}
+
+.panel-telemetry {
+	border-top: 2px solid #3a3a3a;
+}
+
+.telemetry-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 8px 12px;
+	background: #1a1a1a;
+	border-bottom: 1px solid #2d2d2d;
+}
+
+.telemetry-header label {
+	color: #00ffff;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.telemetry-dropdown {
+	flex: 1;
+	min-width: 280px;
+	color: #000;
+}
+
+.telemetry-graph {
+	height: 300px;
+}
+
+@media (max-width: 1200px) {
+	.filters-grid {
+		grid-template-columns: repeat(2, minmax(220px, 1fr));
+	}
+}
+
+@media (max-width: 800px) {
+	.filters-grid {
+		grid-template-columns: 1fr;
+	}
+	.telemetry-header {
+		flex-direction: column;
+		align-items: stretch;
+	}
+}
