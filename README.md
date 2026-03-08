@@ -104,6 +104,7 @@ pip install -r requirements.txt
 The ingestion module authenticates with Space-Track.org using credentials stored in a `.env` file in the project root.
 
 In the project root directory, create a new file named exactly **.env**.
+
 `.env`:
 ```
 SPACETRACK_USERNAME=your_email@example.com
